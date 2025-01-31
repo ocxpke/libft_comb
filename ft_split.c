@@ -6,7 +6,7 @@
 /*   By: jose-ara < jose-ara@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:26:47 by jose-ara          #+#    #+#             */
-/*   Updated: 2025/01/28 20:24:23 by jose-ara         ###   ########.fr       */
+/*   Updated: 2025/01/31 12:49:37 by jose-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static size_t	take_len(char const *s, char c)
 	return (cont);
 }
 
-char	**free_back(char **words)
+char	**free_back_splitted(char **words)
 {
 	size_t	i;
 
@@ -73,7 +73,7 @@ char	**ft_split(char const *s, char c)
 			len_word = take_len(s, c);
 			ret[i] = ft_substr(s, 0, len_word);
 			if (!ret[i])
-				return (free_back(ret));
+				return (free_back_splitted(ret));
 			i++;
 			s += len_word;
 		}

@@ -6,7 +6,7 @@
 /*   By: jose-ara < jose-ara@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 21:00:54 by jose-ara          #+#    #+#             */
-/*   Updated: 2025/01/28 20:49:41 by jose-ara         ###   ########.fr       */
+/*   Updated: 2025/01/31 12:49:09 by jose-ara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -312,7 +312,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
  * @return Pointer to positon of the first word or null
  */
 char	**ft_split(char const *s, char c);
-char	**free_back(char **words);
+
+/**
+ * @brief Liberates memory occupied by the split method
+ *
+ * @param words The splitted result
+ * @return Always NULL
+ */
+char	**free_back_splitted(char **words);
 
 /**
  * @brief Concatenates dst and src in the buffer of length size
